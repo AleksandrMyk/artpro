@@ -1,0 +1,237 @@
+.sec {
+  width: 100%;
+  height: 100vh;
+  background-image: linear-gradient(to bottom, #000000ce, #000000bb),
+    url(/img/title/bgh1.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+/*-------------------------------------------------*/
+.navigation {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  height: 70px;
+  margin: 0 auto;
+}
+.navigation {
+  background-color: #fcfafb00;
+  border-top: 1px solid rgb(255, 255, 255);
+  border-bottom: 1px solid rgb(255, 255, 255);
+}
+
+.LinkGallery,
+.LinkCond,
+.LinkContacts {
+  color: #ffffff;
+  font-size: 20px;
+}
+/*--------------------------------------------------*/
+/*title*/
+.titleBox {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  margin: 0 auto;
+  padding: 0;
+}
+.mainTitle {
+  color: #ffffff;
+  text-align: center;
+}
+.title {
+  font-size: 48px;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+}
+.subtitle {
+  font-size: 38px;
+}
+/*-------------------------------------*/
+/*folloBox*/
+.followBox {
+  display: flex;
+  width: 70%;
+  margin: 0 auto;
+  margin-bottom: 4px;
+}
+
+/*contacts icons*/
+.social {
+  display: flex;
+  width: 70%;
+  justify-content: space-between;
+  margin: 0 auto;
+}
+.icons {
+  width: 40px;
+  height: 40px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  filter: grayscale(100%);
+}
+.linkBox {
+  width: 40px;
+  height: 40px;
+}
+.fb {
+  background-image: url(../img/social/facebook.svg);
+}
+.instagram {
+  background-image: url(../img/social/instagram.svg);
+}
+.pinterest {
+  background-image: url(../img/social/pinterest.svg);
+}
+.mail {
+  background-image: url(../img/social/gmail.svg);
+}
+.viber {
+  background-image: url(../img/social/viber.svg);
+}
+.whatsapp {
+  background-image: url(../img/social/whatsapp.svg);
+}
+.telegram {
+  background-image: url(../img/social/telegram.svg);
+}
+.mobile {
+  background-image: url(../img/social/phone.svg);
+}
+
+.fb:hover,
+.instagram:hover,
+.pinterest:hover,
+.mail:hover,
+.viber:hover,
+.whatsapp:hover,
+.telegram:hover,
+.mobile:hover {
+  filter: contrast(100%);
+}
+
+/* .sec {
+  width: 100%;
+  height: 100vh;
+  background-image: linear-gradient(to bottom, #000000ce, #000000bb),
+    url(/img/title/bgh1.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.navigation,
+.footer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  height: 100px;
+  background-color: #00000054;
+  margin: 0 auto;
+}
+.navigation {
+  border-bottom: 1px solid rgb(255, 255, 255);
+}
+.footer {
+  border-top: 1px solid rgb(255, 255, 255);
+}
+
+.LinkGallery,
+.LinkCond,
+.LinkContacts {
+  color: #ffffff;
+  font-size: 20px;
+}
+
+.titleBox {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  margin: 0 auto;
+  padding: 0;
+}
+.mainTitle {
+  color: #ffffff;
+  text-align: center;
+}
+.title {
+  font-size: 48px;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+}
+.subtitle {
+  font-size: 38px;
+}
+
+.followBox {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  margin-bottom: 4px;
+  align-items: center;
+}
+
+
+.social {
+  display: flex;
+  margin: 0 auto;
+}
+.icons {
+  width: 40px;
+  height: 40px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  filter: grayscale(100%);
+}
+.linkBox {
+  width: 40px;
+  height: 40px;
+  margin-right: 5px;
+}
+.fb {
+  background-image: url(../img/social/facebook.svg);
+}
+.instagram {
+  background-image: url(../img/social/instagram.svg);
+}
+.pinterest {
+  background-image: url(../img/social/pinterest.svg);
+}
+.mail {
+  background-image: url(../img/social/gmail.svg);
+}
+.viber {
+  background-image: url(../img/social/viber.svg);
+}
+.whatsapp {
+  background-image: url(../img/social/whatsapp.svg);
+}
+.telegram {
+  background-image: url(../img/social/telegram.svg);
+}
+.mobile {
+  background-image: url(../img/social/phone.svg);
+}
+
+.fb:hover,
+.instagram:hover,
+.pinterest:hover,
+.mail:hover,
+.viber:hover,
+.whatsapp:hover,
+.telegram:hover,
+.mobile:hover {
+  filter: contrast(100%);
+} */

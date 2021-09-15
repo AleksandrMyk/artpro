@@ -1,0 +1,32 @@
+.photoSec {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  background-color: rgba(0, 0, 0, 0.911);
+}
+
+/* .photoList {
+  display: flex;
+  flex-wrap: wrap;
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 20px;
+} */
+
+.photoItem {
+  display: flex;
+  width: 300px;
+  height: auto;
+  /* margin: 0 auto; */
+}
+
+.photoImg {
+  display: flex;
+
+  width: 300px;
+  height: auto;
+  padding: 20px;
+  margin: 0 auto;
+}

@@ -1,0 +1,44 @@
+[
+  {
+    "id": "1",
+    "text": "описание.....",
+    "arts": [
+      {
+        "pic": "./img/more/1.jpg",
+        "id": "1",
+        "name": "Untitled #1"
+      },
+      {
+        "pic": "./img/more/6.jpg",
+        "id": "2",
+        "name": "Untitled #6"
+      },
+      {
+        "pic": "./img/more/23.jpg",
+        "id": "3",
+        "name": "Untitled #23"
+      }
+    ]
+  },
+  {
+    "id": "2",
+    "text": "описание.....",
+    "arts": [
+      {
+        "pic": "./img/more/2.jpg",
+        "id": "1",
+        "name": "Untitled #2"
+      },
+      {
+        "pic": "./img/more/3.jpg",
+        "id": "2",
+        "name": "Untitled #2"
+      },
+      {
+        "pic": "./img/more/4.jpg",
+        "id": "3",
+        "name": "Untitled #2"
+      }
+    ]
+  }
+]
