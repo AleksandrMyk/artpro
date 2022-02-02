@@ -32,28 +32,17 @@ class Slider extends Component {
     zoom: true,
 
     data: [],
-    id: this.props.match.params.id,
   };
 
   componentDidMount() {
-    Object.entries(pages);
+    const pictures = pages.map(item => item.arts);
+    this.setState({ data: pictures });
+
     this.setState({ data: pages });
-    console.log(pages);
-    let id = this.state.id;
-    console.log(id);
   }
-
-  chekedID = () => {
-    let goodId = [];
-    Object.entries(pages)
-      .map(item => item.id)
-      .push(goodId);
-    console.log(goodId);
-  };
-
   render() {
     const { data } = this.state;
-    console.log(data);
+    console.log(data, 'data');
     return (
       <>
         <Swiper {...this.state}>
@@ -63,12 +52,14 @@ class Slider extends Component {
                 className="swiper-zoom-container imgBox"
                 data-swiper-zoom="3"
               >
-                <img
-                  src={item.pic}
-                  className={style.img1}
-                  id="img"
-                  alt={item.name}
-                />
+                {item.arts.map(i => (
+                  <img
+                    src={i.pic}
+                    className={style.img1}
+                    alt={item.name}
+                    key={i.id}
+                  />
+                ))}
               </div>
             </SwiperSlide>
           ))}

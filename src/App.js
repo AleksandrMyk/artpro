@@ -12,8 +12,8 @@ class App extends Component {
     return (
       <>
         <Switch>
-          {/* <Route path="/" exact component={MainPage} /> */}
-          <Route path="/" exact component={MainPageMobile} />
+          <Route path="/" exact component={MainPage} />
+          {/* <Route path="/" exact component={MainPageMobile} /> */}
           <Route path="/contacts" component={Contacts} />
           <Route path="/gallery" component={Gallery} />
           <Route path="/artwork#:id" component={Slider} />
