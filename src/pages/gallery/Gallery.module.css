@@ -6,13 +6,12 @@
   background-color: rgba(0, 0, 0, 0.911);
 }
 
-/* .photoList {
+.photoList {
   display: flex;
   flex-wrap: wrap;
   width: 90%;
   margin: 0 auto;
-  margin-top: 20px;
-} */
+}
 
 .photoItem {
   display: flex;

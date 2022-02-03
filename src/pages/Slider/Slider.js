@@ -17,52 +17,62 @@ import style from './Slider.module.css';
 SwiperCore.use([Navigation, Pagination, Scrollbar, Keyboard, Zoom]);
 
 class Slider extends Component {
-  state = {
-    slidesPerView: 1,
-    navigation: true,
-    pagination: {
-      clickable: true,
-    },
-    scrollbar: {
-      draggable: true,
-    },
-    keyboard: {
-      enabled: true,
-    },
-    zoom: true,
-
-    data: [],
-  };
+  constructor(props) {
+    console.log('Slider ~ constructor ~ props', props);
+    super(props);
+    this.state = {
+      slidesPerView: 1,
+      navigation: true,
+      pagination: {
+        clickable: true,
+      },
+      scrollbar: {
+        draggable: true,
+      },
+      keyboard: {
+        enabled: true,
+      },
+      zoom: true,
+      data: [],
+    };
+  }
 
   componentDidMount() {
-    const pictures = pages.map(item => item.arts);
-    this.setState({ data: pictures });
-
     this.setState({ data: pages });
   }
+
   render() {
     const { data } = this.state;
-    console.log(data, 'data');
+    console.log('Slider ~ render ~ data', data);
+    console.log(this.props, 'props');
+    let paramsId = this.props.match.params.id;
     return (
       <>
         <Swiper {...this.state}>
-          {data.map(item => (
-            <SwiperSlide key={item.id}>
-              <div
-                className="swiper-zoom-container imgBox"
-                data-swiper-zoom="3"
-              >
-                {item.arts.map(i => (
-                  <img
-                    src={i.pic}
-                    className={style.img1}
-                    alt={item.name}
-                    key={i.id}
-                  />
-                ))}
-              </div>
-            </SwiperSlide>
-          ))}
+          {data.map(item => {
+            return (
+              paramsId === item.id &&
+              item.arts.map(i => {
+                return (
+                  <>
+                    <SwiperSlide key={item.id}>
+                      <div
+                        className="swiper-zoom-container imgBox"
+                        data-swiper-zoom="3"
+                      >
+                        <img
+                          src={i.pic}
+                          className={style.img1}
+                          alt={item.name}
+                          key={i.id}
+                        />
+                      </div>
+                    </SwiperSlide>
+                  </>
+                );
+              })
+            );
+          })}
         </Swiper>
         <section className={style.aboutSec}>
           <Header />
@@ -79,3 +89,49 @@ class Slider extends Component {
 }
 
 export default Slider;
+
+//   render() {
+//     const { data } = this.state;
+//     console.log('Slider ~ render ~ data', data);
+//     console.log(this.props, 'props');
+//     let paramsId = this.props.match.params.id;
+//     return (
+//       <>
+//         <Swiper {...this.state}>
+//           {data.map(item => {
+//             return (
+//               paramsId === item.id && (
+//                 <>
+//                   <SwiperSlide key={item.id}>
+//                     <div
+//                       className="swiper-zoom-container imgBox"
+//                       data-swiper-zoom="3"
+//                     >
+//                       {item.arts.map(i => (
+//                         <img
+//                           src={i.pic}
+//                           className={style.img1}
+//                           alt={item.name}
+//                           key={i.id}
+//                         />
+//                       ))}
+//                     </div>
+//                   </SwiperSlide>
+//                 </>
+//               )
+//             );
+//           })}
+//         </Swiper>
+//         <section className={style.aboutSec}>
+//           <Header />
+//           {data.map(item => (
+//             <p className={style.aboutText} key={item.id}>
+//               {item.text}
+//             </p>
+//           ))}
+//           <Footer />
+//         </section>
+//       </>
+//     );
+//   }
+// }
