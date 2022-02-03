@@ -8,10 +8,11 @@ class MainPage extends Component {
     return (
       <>
         <section className={style.sec}>
+          <p className={style.subtitle}>Zhenya Zhelevska</p>
+
           <header className={style.header}>
             <h2 className={style.mainTitle}>
               <p className={style.title}>my abstract art.</p>
-              <p className={style.subtitle}>Zhenya Zhelevska</p>
             </h2>
             <nav className={classNames(style.hoverBox, style.shadowpulse)}>
               <Link to="/gallery" className={style.LinkHoverGallery}></Link>

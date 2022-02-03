@@ -39,21 +39,28 @@ class Gallery extends Component {
             // className={style.styleUl}
           >
             {artsData.map(item => (
-              <div key={item.id} className={style.photoItem}>
-                <Link
-                  to={{
-                    pathname: `/artwork#${item.id}`,
-                    state: { from: this.props.location },
-                  }}
-                >
+              <>
+                <div key={item.id} className={style.photoBox}>
                   <img
                     id={item.id}
                     src={item.pic}
                     className={style.photoImg}
                     alt={item.name}
                   />
-                </Link>
-              </div>
+                  <div className={style.moreBox}>
+                    <span className={style.moreBoxTitle}>{item.name}</span>
+                    <Link
+                      className={style.moreBoxLink}
+                      to={{
+                        pathname: `/artwork#${item.id}`,
+                        state: { from: this.props.location },
+                      }}
+                    >
+                      see more
+                    </Link>
+                  </div>
+                </div>
+              </>
             ))}
           </Masonry>
         </section>

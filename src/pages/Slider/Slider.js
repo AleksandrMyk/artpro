@@ -43,12 +43,10 @@ class Slider extends Component {
 
   render() {
     const { data } = this.state;
-    console.log('Slider ~ render ~ data', data);
-    console.log(this.props, 'props');
     let paramsId = this.props.match.params.id;
     return (
       <>
-        <Swiper {...this.state}>
+        <Swiper {...this.state} className={style.imgBox}>
           {data.map(item => {
             return (
               paramsId === item.id &&
@@ -57,7 +55,7 @@ class Slider extends Component {
                   <>
                     <SwiperSlide key={item.id}>
                       <div
-                        className="swiper-zoom-container imgBox"
+                        className="swiper-zoom-container"
                         data-swiper-zoom="3"
                       >
                         <img
